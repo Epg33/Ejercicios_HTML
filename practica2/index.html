@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <head>
+    <title>Práctica 2</title>
+  </head>
+
+  <body>
+    <h1>Tienda de Celulares</h1>
+    visitas: <h2 id="visitas"></h2>
+    <a href="#info1">Informacion 1</a>
+    <a href="#info2">Informacion 2</a>
+    <a href="#links">Links</a>
+    <h2>Menu Galeria</h2>
+    <a href="./galeria1.html">Informacion 3</a>
+    <a href="./galeria2.html" target="blank">Informacion 4</a>
+    <main>
+      <p>Honestidad y Calidad nuestros compromisos</p>
+    </main>
+    <img src="./imagenes/tienda.jpg"alt="">
+    <h2 id="info1">Informacion 1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, doloribus. Optio aliquam voluptate voluptatem quas quos ipsam quo, perferendis laboriosam sit aliquid, rem architecto, voluptatibus enim voluptatum commodi? Ducimus, iure.</p>
+    <h2 id="info2">informacion 2</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi minima corporis voluptates quibusdam consectetur ad eum harum nobis illo magni! Illo ipsam repudiandae fuga tempore totam asperiores, dolores ex reprehenderit!</p>
+    <h3 id="links">Links de interes</h3>
+    <a href="https://www.alkosto.com/celulares/telefonos-celulares/c/BI_101_ALKOS" target="blank">Compra de celulares</a>
+    <script>
+      let visitasActuales= localStorage.getItem("visitas");
+      if(visitasActuales){
+        let aumento= parseInt(visitasActuales)+1;
+        document.getElementById("visitas").innerHTML= aumento;
+        localStorage.setItem("visitas", aumento);
+        
+      }
+      else{
+        localStorage.setItem("visitas", 1);
+        document.getElementById("visitas").innerHTML= 1;
+      }
+
+      
+    </script>
+  </body>
+</html>
